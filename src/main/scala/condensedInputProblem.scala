@@ -1,6 +1,7 @@
 /**
  * Created by jmlopez on 08/12/15.
  */
+
 class condensedInputProblem {
 
 }
@@ -50,7 +51,6 @@ object condensedInputProblem {
     while (index < inputValues.length) {
       sumInput += BigInt(inputValues(index))
       if (sumInput > sumOut) {
-
         return index
       }
       index += 1
@@ -58,4 +58,34 @@ object condensedInputProblem {
     index
   }
 
+  //---------------------
+
+  def reduceListOfLongInN2(inputValues: List[Long], n:Long): List[Long] ={
+    var rem = n
+    var resValues = inputValues
+    while (rem > 0 && resValues.nonEmpty) {
+      rem = rem - resValues.head
+      resValues = {if (rem>=0) {resValues.tail} else {(rem*(-1))::resValues.tail}}
+    }
+    resValues
+  }
+
+
+  /**
+   * Calculates an adjusted number of input values that is reduced from the original size of
+   * 'inputValues' when any output values must consume multiple input values.
+   *
+   * @param inputValues An array of input values being spent in a transaction.
+   * @param outputValues An array of output values being received in a transaction.
+   *
+   * @return The adjusted number of inputs.
+   */
+
+  def getCondensedInputCount2(inputValues:Array[Long], outputValues:Array[Long]): Int = {
+    var inputLists = inputValues.toList
+    for (outputV <- outputValues){
+      inputLists = reduceListOfLongInN2(inputLists, outputV)
+    }
+    inputValues.length-inputLists.length
+  }
 }
