@@ -28,14 +28,14 @@ With this execution plan:
 We have:
 
 #### Times for solution with BigInt: 
-- `time:`- 1951.745ms
-- `time:`- 1122.173ms
-- `time:`- 1050.389ms
-- `Reduction:`- 9999999
+- `time:` 1951.745ms
+- `time:` 1122.173ms
+- `time:` 1050.389ms
+- `Reduction:` 9999999
 
 #### Times for solution with List: 
-- `time:`-7187.701ms
-- `time:`-6162.138ms
-- `time:`-4378.99ms
-- `Reduction:`-9999999
+- `time:` 7187.701ms
+- `time:` 6162.138ms
+- `time:` 4378.99ms
+- `Reduction:` 9999999
 
