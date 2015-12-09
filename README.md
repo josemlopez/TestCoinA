@@ -1,7 +1,7 @@
-TestCoinA
+#### TestCoinA
 
-The two solutions supported 10.000.000 of elements in each array (input and output) in a WM with 250MB of memory.
-The solution with BigInt is x5 faster in the worst possible case (all the records in input array are affected)
+- The two solutions supported 10.000.000 of elements in each array (input and output) in a WM with 250MB of memory.
+- The solution with BigInt is x5 faster in the worst possible case (all the records in input array are affected)
 
 With this execution plan:
 
@@ -27,15 +27,15 @@ With this execution plan:
     
 We have:
 
-Times for solution with BigInt: 
-time: 1951.745ms
-time: 1122.173ms
-time: 1050.389ms
-9999999
+#### Times for solution with BigInt: 
+- `time:`- 1951.745ms
+- `time:`- 1122.173ms
+- `time:`- 1050.389ms
+- `Reduction:`- 9999999
 
+#### Times for solution with List: 
+- `time:`-7187.701ms
+- `time:`-6162.138ms
+- `time:`-4378.99ms
+- `Reduction:`-9999999
 
-Times for solution with List: 
-time: 7187.701ms
-time: 6162.138ms
-time: 4378.99ms
-9999999
